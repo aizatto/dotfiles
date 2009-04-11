@@ -1,3 +1,4 @@
+colorscheme twilight
 set go-=T
 set columns=87
 
