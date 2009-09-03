@@ -1,6 +1,7 @@
 colorscheme twilight
 set go-=T
 set columns=87
+set lines=90
 
 function Fullscreen()
   set columns=187
