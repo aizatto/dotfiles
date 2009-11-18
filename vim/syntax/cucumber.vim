@@ -69,12 +69,14 @@ function! s:Add(name)
 endfunction
 
 syn match   cucumberComment  "\%(^\s*\)\@<=#.*"
+syn match   cucumberUnparsed "\S.*" nextgroup=cucumberUnparsedComment,cucumberUnparsed,cucumberTags,cucumberBackground,cucumberScenario,cucumberScenarioOutline,cucumberExamples skipwhite skipempty contained
+syn match   cucumberUnparsedComment "#.*" nextgroup=cucumberUnparsedComment,cucumberUnparsed,cucumberTags,cucumberBackground,cucumberScenario,cucumberScenarioOutline,cucumberExamples skipwhite skipempty contained
 
-exe 'syn match cucumberFeature "\%(^\s*\)\@<='.s:pattern('feature').':"'
+exe 'syn match cucumberFeature "\%(^\s*\)\@<='.s:pattern('feature').':" nextgroup=cucumberUnparsedComment,cucumberUnparsed,cucumberBackground,cucumberScenario,cucumberScenarioOutline,cucumberExamples skipwhite skipempty'
 exe 'syn match cucumberBackground "\%(^\s*\)\@<='.s:pattern('background').':"'
 exe 'syn match cucumberScenario "\%(^\s*\)\@<='.s:pattern('scenario').':"'
 exe 'syn match cucumberScenarioOutline "\%(^\s*\)\@<='.s:pattern('scenario_outline').':"'
-exe 'syn match cucumberExamples "\%(^\s*\)\@<='.s:pattern('examples').':" nextgroup=cucumberExampleTable skipnl skipwhite'
+exe 'syn match cucumberExamples "\%(^\s*\)\@<='.s:pattern('examples').':" nextgroup=cucumberExampleTable skipempty skipwhite'
 
 syn match   cucumberPlaceholder   "<[^<>]*>" contained containedin=@cucumberStepRegions
 syn match   cucumberExampleTable  "\%(^\s*\)\@<=|.*" contains=cucumberDelimiter
@@ -86,6 +88,7 @@ call s:Add('Then')
 call s:Add('When')
 call s:Add('Given')
 
+hi def link cucumberUnparsedComment   cucumberComment
 hi def link cucumberComment           Comment
 hi def link cucumberFeature           Macro
 hi def link cucumberBackground        Define
