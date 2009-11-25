@@ -44,3 +44,6 @@ nnoremap <S-Q> <Esc>
 " For those quick fingers, which can't release the shift key.
 nmap :W :w
 nmap :Q :q
+
+" loads the directories "vim/ftdetect" and "vim/ftplugin"
+filetype plugin on
