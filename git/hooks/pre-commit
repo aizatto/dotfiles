@@ -1,0 +1,46 @@
+#!/bin/sh
+
+flag=0
+
+FILES=`ls */**/*.rb 2> /dev/null`
+for f in $FILES
+do
+  result=`ruby -c $f`
+
+  if [ $? -ne 0 ]; then
+    flag=1
+    echo $result
+  fi
+done
+
+FILES=`find . -type f -name \*.php`
+for f in $FILES
+do
+  result=`php -l $f`
+
+  if [ $? -ne 0 ]; then
+    flag=1
+    echo $result
+  fi
+
+  result=`grep -n fb\( $f`
+  if [ $? -eq 0 ]; then
+    flag=1
+    echo "$f contains:"
+    echo $result
+  fi
+done
+
+FILES=`find . -type f -name \*.js`
+for f in $FILES
+do
+  result=`grep -n console $f`
+
+  if [ $? -eq 0 ]; then
+    flag=1
+    echo "$f contains:"
+    echo $result
+  fi
+done
+
+exit $flag
