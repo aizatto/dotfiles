@@ -1,0 +1,7 @@
+--type-add
+xml=builder
+#ruby=haml
+#html=erb
+--smart-case
+--nosql
+--ignore-dir=wp-content
