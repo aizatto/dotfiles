@@ -17,7 +17,7 @@ if [ -d /opt/local/man ]; then
   export MANPATH=/opt/local/man:$MANPATH
 fi
 
-export PATH=/opt/local/bin:/opt/local/sbin:/Users/aizat/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export ACK_PAGER='less -R'
 alias pign=ping
 alias mvimdiff='mvim -d'
