@@ -1,6 +1,7 @@
 source ~/.vim/typos.vim                 " Common typos and abbreviations
 
-" == Scettings
+" == Settings
+" For an overview of options see :help options-list
 set backspace=indent,eol,start " more powerful backspacing
 set backupext=.backup          " Backup Extension
 set formatoptions=qroct        " Format options
@@ -24,9 +25,13 @@ set smartindent                " Always indent my tabs when I enter a new line
 set title                      " Set VIM to change the title
 set titlestring=vim:\ %F       " Format the title
 set mouse=a
+set smarttab
 set tags=tags;/                " keep going up a dir until you find a tags file
 
 " == Mapping 
+" Open a CTAG in a new tab: http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
 " <CTRL>+TAB to cycle through tabs, seems to only work in GVIM
 noremap <C-Tab> gt
 
