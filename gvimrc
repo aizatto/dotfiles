@@ -12,3 +12,11 @@ function Halfscreen()
   set columns=87
 endfunction
 command! Halfscreen :call Halfscreen()
+
+function Halfscreen15()
+  set columns=100
+endfunction
+command! Halfscreen15 :call Halfscreen15()
+
+map <D-`> :maca _cycleWindows:<CR>
+map <D-~> :maca _cycleWindowsBackwards:<CR>
