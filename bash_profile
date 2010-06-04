@@ -21,6 +21,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export ACK_PAGER='less -R'
 alias pign=ping
 alias mvimdiff='mvim -d'
+alias mysql.server=/opt/local/share/mysql5/mysql/mysql.server
 
 # For git goodness
 # Copied from http://aaroncrane.co.uk/2009/03/git_branch_prompt/
