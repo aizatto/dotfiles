@@ -50,3 +50,6 @@ nmap :Q :q
 
 " loads the directories "vim/ftdetect" and "vim/ftplugin"
 filetype plugin on
+
+" When the space bar key is hit, go down 10 spaces
+nmap <Space> 10j
