@@ -20,10 +20,13 @@ set expandtab                  " Use spaces instead of tabs
 set visualbell                 " Screw sound, flash the screen instead
 set shiftwidth=2               " Shiftwidth 
 set tabstop=2                  " Number of spaces tabs should be converted to
+set softtabstop=2
+set smartindent                " Always indent my tabs when I enter a new line
 set title                      " Set VIM to change the title
 set titlestring=vim:\ %F       " Format the title
 set mouse=a
 set smarttab
+set tags=tags;/                " keep going up a dir until you find a tags file
 
 " == Mapping 
 " Open a CTAG in a new tab: http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks

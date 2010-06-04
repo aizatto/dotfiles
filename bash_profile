@@ -3,6 +3,10 @@ if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
 
+if [ -d $HOME/bin ]; then
+  export PATH=$HOME/bin:$PATH
+fi
+
 for i in apache2/bin lib/mysql5/bin lib/postgresql82/bin; do
   export PATH=/opt/local/$i:$PATH
 done
