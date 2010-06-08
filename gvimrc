@@ -13,13 +13,5 @@ function Halfscreen()
 endfunction
 command! Halfscreen :call Halfscreen()
 
-function Halfscreen15()
-  set columns=100
-endfunction
-command! Halfscreen15 :call Halfscreen15()
-
-map <D-`> :maca _cycleWindows:<CR>
-map <D-~> :maca _cycleWindowsBackwards:<CR>
-
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
