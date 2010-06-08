@@ -17,6 +17,9 @@ if [ -d /opt/local/man ]; then
   export MANPATH=/opt/local/man:$MANPATH
 fi
 
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export ACK_PAGER='less -R'
 alias pign=ping
