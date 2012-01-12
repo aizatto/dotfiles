@@ -6,5 +6,7 @@
   status = auto
   branch = auto
   ui = true
+[alias]
+  cloen = clone
 [core]
   excludesfile = ~/.gitignore
