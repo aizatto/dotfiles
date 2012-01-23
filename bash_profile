@@ -54,3 +54,4 @@ magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
 PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$git_branch\[$normal_colours\]\$ "
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
