@@ -8,5 +8,6 @@
   ui = true
 [alias]
   cloen = clone
+  dif = diff
 [core]
   excludesfile = ~/.gitignore
