@@ -1,17 +1,24 @@
 # bash-completion
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
-fi
 
-if [ -d $HOME/bin ]; then
-  export PATH=$HOME/bin:$PATH
-fi
+function __aizatto_add_path {
+  [[ -s $1 ]] && export PATH=$PATH:$1
+}
 
-for i in apache2/bin lib/mysql5/bin lib/postgresql82/bin; do
-  export PATH=/opt/local/$i:$PATH
-done
+function __aizatto_source {
+  [[ -s $1 ]] && . $1
+}
 
-PATH=$PATH:/usr/local/bin
+__aizatto_add_path "$HOME/bin"
+__aizatto_add_path "$HOME/src/android-sdk-macosx/tools"
+__aizatto_add_path "$HOME/src/android-sdk-macosx/platform-tools"
+__aizatto_add_path "$HOME/src/arcanist/bin"
+__aizatto_add_path /usr/local/bin
+__aizatto_add_path /opt/local/apache2/bin
+__aizatto_add_path /opt/local/lib/mysql5/bin
+__aizatto_add_path /opt/local/lib/postgresql82/bin
+
+__aizatto_source /opt/local/etc/bash_completion
+__aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 if [ -d /opt/local/man ]; then
   export MANPATH=/opt/local/man:$MANPATH
@@ -54,4 +61,3 @@ magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
 PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$git_branch\[$normal_colours\]\$ "
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
