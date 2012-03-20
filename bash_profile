@@ -13,6 +13,9 @@ __aizatto_add_path "$HOME/src/android-sdk-macosx/tools"
 __aizatto_add_path "$HOME/src/android-sdk-macosx/platform-tools"
 __aizatto_add_path "$HOME/src/arcanist/bin"
 __aizatto_add_path /usr/local/bin
+__aizatto_add_path /usr/local/sbin
+__aizatto_add_path /opt/local/bin
+__aizatto_add_path /opt/local/sbin
 __aizatto_add_path /opt/local/apache2/bin
 __aizatto_add_path /opt/local/lib/mysql5/bin
 __aizatto_add_path /opt/local/lib/postgresql82/bin
@@ -27,9 +30,8 @@ fi
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export ACK_PAGER='less -R'
+
 alias pign=ping
 alias mvimdiff='mvim -d'
 alias mysql.server=/opt/local/share/mysql5/mysql/mysql.server
