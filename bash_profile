@@ -19,6 +19,7 @@ __aizatto_add_path /opt/local/lib/postgresql82/bin
 
 __aizatto_source /opt/local/etc/bash_completion
 __aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
+__aizatto_source "$HOME/.nvm/nvm.sh"
 
 if [ -d /opt/local/man ]; then
   export MANPATH=/opt/local/man:$MANPATH
@@ -60,4 +61,5 @@ green=$'\e[1;32m'
 magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
+PS1="\h:\W \u "
 PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$git_branch\[$normal_colours\]\$ "
