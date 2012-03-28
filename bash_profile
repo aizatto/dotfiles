@@ -1,17 +1,14 @@
 # bash-completion
 
 function __aizatto_add_path {
-  [[ -s $1 ]] && export PATH=$PATH:$1
+  [[ -d $1 ]] && export PATH=$1:$PATH
 }
 
 function __aizatto_source {
   [[ -s $1 ]] && . $1
 }
 
-__aizatto_add_path "$HOME/bin"
-__aizatto_add_path "$HOME/src/android-sdk-macosx/tools"
-__aizatto_add_path "$HOME/src/android-sdk-macosx/platform-tools"
-__aizatto_add_path "$HOME/src/arcanist/bin"
+# Order from least priority to highest priority
 __aizatto_add_path /usr/local/bin
 __aizatto_add_path /usr/local/sbin
 __aizatto_add_path /opt/local/bin
@@ -19,6 +16,10 @@ __aizatto_add_path /opt/local/sbin
 __aizatto_add_path /opt/local/apache2/bin
 __aizatto_add_path /opt/local/lib/mysql5/bin
 __aizatto_add_path /opt/local/lib/postgresql82/bin
+__aizatto_add_path "$HOME/bin"
+__aizatto_add_path "$HOME/src/android-sdk-macosx/tools"
+__aizatto_add_path "$HOME/src/android-sdk-macosx/platform-tools"
+__aizatto_add_path "$HOME/src/arcanist/bin"
 
 __aizatto_source /opt/local/etc/bash_completion
 __aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
