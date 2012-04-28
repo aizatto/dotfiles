@@ -9,5 +9,6 @@
 [alias]
   cloen = clone
   dif = diff
+  stauts = status
 [core]
   excludesfile = ~/.gitignore
