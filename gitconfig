@@ -7,7 +7,12 @@
   branch = auto
   ui = true
 [alias]
+  ci = commit
   cloen = clone
+  co = checkout
   dif = diff
+  l = log
+  l1 = log -n1 -p
+  ll = log -p
 [core]
   excludesfile = ~/.gitignore
