@@ -32,6 +32,7 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export ACK_PAGER='less -R'
+export GIT_EDITOR=vim
 
 alias pign=ping
 alias mvimdiff='mvim -d'
