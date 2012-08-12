@@ -38,6 +38,16 @@ alias pign=ping
 alias mvimdiff='mvim -d'
 alias mysql.server=/opt/local/share/mysql5/mysql/mysql.server
 
+alias ga='git add'
+alias gci='git commit'
+alias gco='git checkout'
+alias gdc='git diff --cached'
+alias gd='git diff'
+alias gl='git log'
+alias gl1='git log -n1 -p'
+alias gll='git log -p'
+alias gs='git status'
+
 # For git goodness
 # Copied from http://aaroncrane.co.uk/2009/03/git_branch_prompt/
 function find_git_branch {
