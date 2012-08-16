@@ -40,6 +40,7 @@ alias mvimdiff='mvim -d'
 alias mysql.server=/opt/local/share/mysql5/mysql/mysql.server
 
 alias ga='git add'
+alias gca='git commit --amend --no-edit'
 alias gci='git commit'
 alias gco='git checkout'
 alias gdc='git diff --cached'
