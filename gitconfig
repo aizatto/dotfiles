@@ -10,6 +10,7 @@
   ci = commit
   cloen = clone
   co = checkout
+  chekcout = checkout
   dif = diff
   l = log
   l1 = log -n1 -p

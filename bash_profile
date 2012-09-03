@@ -39,14 +39,17 @@ alias pign=ping
 alias mvimdiff='mvim -d'
 alias mysql.server=/opt/local/share/mysql5/mysql/mysql.server
 
+alias ad='arc diff'
 alias ga='git add'
+alias gau='git add -u'
 alias gca='git commit --amend --no-edit'
 alias gci='git commit'
 alias gco='git checkout'
 alias gdc='git diff --cached'
 alias gd='git diff'
 alias gl='git log'
-alias gl1='git log -n1 -p'
+alias gl1='git log -n1'
+alias gl1p='git log -n1 -p'
 alias gll='git log -p'
 alias gs='git status'
 
