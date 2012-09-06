@@ -16,6 +16,7 @@ __aizatto_add_path /opt/local/sbin
 __aizatto_add_path /opt/local/apache2/bin
 __aizatto_add_path /opt/local/lib/mysql5/bin
 __aizatto_add_path /opt/local/lib/postgresql82/bin
+__aizatto_add_path /usr/local/go/bin
 __aizatto_add_path "$HOME/bin"
 __aizatto_add_path "$HOME/src/android-sdk-macosx/tools"
 __aizatto_add_path "$HOME/src/android-sdk-macosx/platform-tools"
@@ -32,10 +33,25 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export ACK_PAGER='less -R'
+export GIT_EDITOR=vim
 
 alias pign=ping
 alias mvimdiff='mvim -d'
 alias mysql.server=/opt/local/share/mysql5/mysql/mysql.server
+
+alias ad='arc diff'
+alias ga='git add'
+alias gau='git add -u'
+alias gca='git commit --amend --no-edit'
+alias gci='git commit'
+alias gco='git checkout'
+alias gdc='git diff --cached'
+alias gd='git diff'
+alias gl='git log'
+alias gl1='git log -n1'
+alias gl1p='git log -n1 -p'
+alias gll='git log -p'
+alias gs='git status'
 
 # For git goodness
 # Copied from http://aaroncrane.co.uk/2009/03/git_branch_prompt/
