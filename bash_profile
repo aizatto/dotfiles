@@ -14,6 +14,7 @@ __aizatto_add_path /usr/local/sbin
 __aizatto_add_path /opt/local/bin
 __aizatto_add_path /opt/local/sbin
 __aizatto_add_path /opt/local/apache2/bin
+__aizatto_add_path /opt/local/pear/bin
 __aizatto_add_path /opt/local/lib/mysql5/bin
 __aizatto_add_path /opt/local/lib/postgresql82/bin
 __aizatto_add_path /usr/local/go/bin
