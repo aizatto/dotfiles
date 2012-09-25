@@ -34,7 +34,8 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export ACK_PAGER='less -R'
-export GIT_EDITOR=vim
+export EDITOR=vim
+export GIT_EDITOR=$EDITOR
 
 alias pign=ping
 alias mvimdiff='mvim -d'
@@ -52,6 +53,7 @@ alias gl='git log'
 alias gl1='git log -n1'
 alias gl1p='git log -n1 -p'
 alias gll='git log -p'
+alias grc='git rebase --continue'
 alias gs='git status'
 
 # For git goodness
