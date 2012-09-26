@@ -43,6 +43,8 @@ alias mysql.server=/opt/local/share/mysql5/mysql/mysql.server
 
 alias ad='arc diff'
 alias ga='git add'
+alias gb='git branch'
+alias gba='git branch -a'
 alias gau='git add -u'
 alias gca='git commit --amend --no-edit'
 alias gci='git commit'
