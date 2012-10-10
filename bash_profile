@@ -52,6 +52,7 @@ alias gcm='git commit -m'
 alias gco='git checkout'
 alias gdc='git diff --cached'
 alias gd='git diff'
+alias gf='git fetch'
 alias gl='git log'
 alias gl1='git log -n1'
 alias gl1p='git log -n1 -p'
@@ -59,6 +60,7 @@ alias gll='git log -p'
 alias gpr='git pull --rebase'
 alias grc='git rebase --continue'
 alias gs='git status'
+alias gsr='git svn rebase'
 
 # For git goodness
 # Copied from http://aaroncrane.co.uk/2009/03/git_branch_prompt/
