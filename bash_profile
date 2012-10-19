@@ -63,6 +63,7 @@ alias gpr='git pull --rebase'
 alias grc='git rebase --continue'
 alias gs='git status'
 alias gsr='git svn rebase'
+alias gsrgf='git svn rebase && git fetch && git svn rebase'
 
 # For git goodness
 # Copied from http://aaroncrane.co.uk/2009/03/git_branch_prompt/
