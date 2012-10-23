@@ -62,6 +62,8 @@ alias gp='git pull'
 alias gpr='git pull --rebase'
 alias grc='git rebase --continue'
 alias gs='git status'
+alias gsi='git submodule init'
+alias gsu='git submodule update'
 alias gsr='git svn rebase'
 alias gsrgf='git svn rebase && git fetch && git svn rebase'
 
