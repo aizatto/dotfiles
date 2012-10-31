@@ -32,7 +32,7 @@ if [ -d /opt/local/man ]; then
   export MANPATH=/opt/local/man:$MANPATH
 fi
 
-which src-hilite-lesspipe.sh 2> /dev/null
+command src-hilite-lesspipe.sh 2> /dev/null
 [[ $? -eq "0" ]] && export LESSOPEN="| `which src-hilite-lesspipe.sh` %s"
 export LESS=' -R'
 
