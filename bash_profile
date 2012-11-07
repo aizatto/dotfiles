@@ -100,3 +100,6 @@ normal_colours=$'\e[m'
 
 PS1="\h:\W \u "
 PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$git_branch\[$normal_colours\]\$ "
+
+# Disable auto complete case sensitivity
+bind "set completion-ignore-case on"
