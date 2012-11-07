@@ -1,0 +1,8 @@
+--langmap=PHP:.php .phpt .hhi 
+--regex-PHP=/^ *(abstract +|final +)*class +([a-zA-Z0-9_]+)/\2/c/
+--regex-PHP=/^ *(abstract +|final +)*trait +([a-zA-Z0-9_]+)/\2/c/
+--regex-PHP=/^ *(abstract +|final +)*class :([a-zA-Z0-9:_\\-]+)/\2/c/
+--regex-PHP=/^ *(abstract +|final +)*class :([a-zA-Z0-9:_\\-]+)/:\2/c/
+--regex-PHP=/^ *interface +([a-zA-Z0-9_]+)/\1/c/
+--regex-PHP=/^ *(public +|static +|abstract +|protected +|private +)function +&? *([a-zA-Z0-9_]+)/\2/f/
+--regex-PHP=/^const +([a-zA-Z0-9_]+) += /\1/d/
