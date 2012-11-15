@@ -44,6 +44,7 @@ export GIT_EDITOR=$EDITOR
 
 alias pign=ping
 alias mvimdiff='mvim -d'
+alias port='port -dv'
 
 alias ad='arc diff'
 alias ga='git add'
