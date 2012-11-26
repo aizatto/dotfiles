@@ -11,26 +11,23 @@ function __aizatto_source {
 # Order from least priority to highest priority
 __aizatto_add_path /usr/local/bin
 __aizatto_add_path /usr/local/sbin
-__aizatto_add_path /opt/local/bin
-__aizatto_add_path /opt/local/sbin
-__aizatto_add_path /opt/local/apache2/bin
-__aizatto_add_path /opt/local/pear/bin
-__aizatto_add_path /opt/local/lib/mysql5/bin
-__aizatto_add_path /opt/local/share/mysql5/mysql/
-__aizatto_add_path /opt/local/lib/postgresql82/bin
-__aizatto_add_path /usr/local/go/bin
+
 __aizatto_add_path "$HOME/bin"
 __aizatto_add_path "$HOME/src/android-sdk-macosx/tools"
 __aizatto_add_path "$HOME/src/android-sdk-macosx/platform-tools"
 __aizatto_add_path "$HOME/src/arcanist/bin"
 
-__aizatto_source /opt/local/etc/bash_completion
 __aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
 __aizatto_source "$HOME/.nvm/nvm.sh"
 
-if [ -d /opt/local/man ]; then
-  export MANPATH=/opt/local/man:$MANPATH
-fi
+# Load OS specific stuff
+case `uname` in
+  'Darwin' )
+    . ~/.bash/mac
+  ;;
+esac
+
+__aizatto_add_path /usr/local/go/bin
 
 command src-hilite-lesspipe.sh 2> /dev/null
 [[ $? -eq "0" ]] && export LESSOPEN="| `which src-hilite-lesspipe.sh` %s"
@@ -43,9 +40,6 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 
 alias pign=ping
-alias mvimdiff='mvim -d'
-alias port='port -dv'
-
 alias ad='arc diff'
 alias ga='git add'
 alias gb='git branch'

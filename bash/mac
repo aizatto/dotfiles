@@ -1,0 +1,17 @@
+__aizatto_add_path /opt/local/bin
+__aizatto_add_path /opt/local/sbin
+__aizatto_add_path /opt/local/apache2/bin
+__aizatto_add_path /opt/local/pear/bin
+__aizatto_add_path /opt/local/lib/mysql5/bin
+__aizatto_add_path /opt/local/share/mysql5/mysql/
+__aizatto_add_path /opt/local/lib/postgresql82/bin
+
+__aizatto_source /opt/local/etc/bash_completion
+
+alias mvimdiff='mvim -d'
+alias port='port -dv'
+alias top='top -o cpu'
+
+if [ -d /opt/local/man ]; then
+  export MANPATH=/opt/local/man:$MANPATH
+fi
