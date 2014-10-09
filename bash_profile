@@ -40,7 +40,14 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 
 alias pign=ping
-alias ad='arc diff'
+alias ad='arc lint && arc diff'
+alias au='arc unit'
+alias ap='arc pull && arc build'
+
+af() {
+  arc pull && arc feature $1 && arc pull && arc build
+}
+
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
@@ -66,8 +73,11 @@ alias gsu='git submodule update'
 alias gsr='git svn rebase'
 alias gsrgf='git svn rebase && git fetch && git svn rebase'
 
+hbrm() {
+  hg bookmark -r master $1 && hg update $1
+}
+
 alias hb='hg bookmark'
-alias hbrm='hg bookmark -r master'
 alias hca='hg commit --amend'
 alias hd='hg diff'
 alias hl1='hg log -l 1'
@@ -82,6 +92,8 @@ alias hrl='hg resolve --list'
 alias hrm='hg resolve --mark'
 alias hru='hg resolve --unmark'
 alias hs='hg status'
+alias hsn='hg status --no-status'
+alias hgfiles='hg status --no-status --change .'
 alias hu='hg update'
 alias huc='hg update --check'
 alias huC='hg update --clean'
