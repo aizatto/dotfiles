@@ -98,15 +98,14 @@ alias hu='hg update'
 alias huc='hg update --check'
 alias huC='hg update --clean'
 
+green=$'\e[1;32m'
+magenta=$'\e[1;35m'
+normal_colours=$'\e[m'
 
 vcs_branch() {
   git rev-parse --abbrev-ref HEAD 2> /dev/null | awk '{print $1}'
   hg bookmark 2>/dev/null | grep '*' | awk '{print $2}'
 }
-
-green=$'\e[1;32m'
-magenta=$'\e[1;35m'
-normal_colours=$'\e[m'
 
 PS1="\h:\W \u "
 PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(vcs_branch)\[$normal_colours\]\$ "
