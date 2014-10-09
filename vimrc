@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 source ~/.vim/typos.vim                 " Common typos and abbreviations
 
 " == Settings
