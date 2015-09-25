@@ -60,3 +60,7 @@ filetype plugin on
 
 " When the space bar key is hit, go down 10 spaces
 nmap <Space> 10j
+
+set runtimepath+=$GOROOT/misc/vim
+syntax on
+filetype plugin indent on
