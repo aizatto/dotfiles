@@ -40,7 +40,14 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 
 alias pign=ping
-alias ad='arc diff'
+alias ad='arc lint && arc diff'
+alias au='arc unit'
+alias ap='arc pull && arc build'
+
+af() {
+  arc pull && arc feature $1 && arc pull && arc build
+}
+
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
@@ -66,35 +73,42 @@ alias gsu='git submodule update'
 alias gsr='git svn rebase'
 alias gsrgf='git svn rebase && git fetch && git svn rebase'
 
-# For git goodness
-# Copied from http://aaroncrane.co.uk/2009/03/git_branch_prompt/
-function find_git_branch {
-    local dir=. head
-    until [ "$dir" -ef / ]; do
-        if [ -f "$dir/.git/HEAD" ]; then
-            head=$(< "$dir/.git/HEAD")
-            if [[ $head == ref:\ refs/heads/* ]]; then
-                git_branch=" ${head##*/}"
-            elif [[ $head != '' ]]; then
-                git_branch=' (detached)'
-            else
-                git_branch=' (unknown)'
-            fi
-            return
-        fi
-        dir="../$dir"
-    done
-    git_branch=''
+hbrm() {
+  hg bookmark -r master $1 && hg update $1
 }
 
-PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
+alias hb='hg bookmark'
+alias hca='hg commit --amend'
+alias hd='hg diff'
+alias hl1='hg log -l 1'
+alias hl1p='hg log -l 1 -p'
+alias hlcl='hg log --style changelog'
+alias hl='hg log'
+alias hp='hg pull'
+alias hrc='hg rebase --continue'
+alias hrdd='hg rebase -d default'
+alias hrdm='hg rebase -d master'
+alias hrl='hg resolve --list'
+alias hrm='hg resolve --mark'
+alias hru='hg resolve --unmark'
+alias hs='hg status'
+alias hsn='hg status --no-status'
+alias hgfiles='hg status --no-status --change .'
+alias hu='hg update'
+alias huc='hg update --check'
+alias huC='hg update --clean'
 
 green=$'\e[1;32m'
 magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
+vcs_branch() {
+  git rev-parse --abbrev-ref HEAD 2> /dev/null | awk '{print $1}'
+  hg bookmark 2>/dev/null | grep '*' | awk '{print $2}'
+}
+
 PS1="\h:\W \u "
-PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$git_branch\[$normal_colours\]\$ "
+PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(vcs_branch)\[$normal_colours\]\$ "
 
 # Disable auto complete case sensitivity
 bind "set completion-ignore-case on"
