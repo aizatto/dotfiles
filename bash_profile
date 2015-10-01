@@ -19,6 +19,7 @@ __aizatto_add_path "$HOME/src/arcanist/bin"
 
 __aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
 __aizatto_source "$HOME/.nvm/nvm.sh"
+__aizatto_source "$HOME/src/dotfiles/bash/dotfiles_scm_info.sh"
 
 # Load OS specific stuff
 case `uname` in
@@ -102,13 +103,8 @@ green=$'\e[1;32m'
 magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
-vcs_branch() {
-  git rev-parse --abbrev-ref HEAD 2> /dev/null | awk '{print $1}'
-  hg bookmark 2>/dev/null | grep '*' | awk '{print $2}'
-}
-
 PS1="\h:\W \u "
-PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(vcs_branch)\[$normal_colours\]\$ "
+PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(_dotfiles_scm_info)\[$normal_colours\]\$ "
 
 # Disable auto complete case sensitivity
 bind "set completion-ignore-case on"
