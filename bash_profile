@@ -44,13 +44,6 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 
 alias pign=ping
-alias ad='arc lint && arc diff'
-alias au='arc unit'
-alias ap='arc pull && arc build'
-
-af() {
-  arc pull && arc feature $1 && arc pull && arc build
-}
 
 alias ga='git add'
 alias gb='git branch'
