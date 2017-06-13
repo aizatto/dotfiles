@@ -5,3 +5,10 @@ xml=builder
 --smart-case
 --nosql
 --ignore-dir=wp-content
+--ignore-dir=vendor
+--ignore-dir=var
+--ignore-dir=node_modules
+--ignore-dir=__generated__
+--ignore-dir=log
+--type-set
+twig=.twig

@@ -60,6 +60,7 @@ alias gcm='git commit -m'
 alias gco='git checkout'
 alias gdc='git diff --cached'
 alias gd='git diff'
+alias gdd='git diff --name-only HEAD^ | cat'
 alias gf='git fetch'
 alias gfgsr='git fetch && git svn rebase'
 alias gl='git log'
@@ -74,6 +75,7 @@ alias gsi='git submodule init'
 alias gsu='git submodule update'
 alias gsr='git svn rebase'
 alias gsrgf='git svn rebase && git fetch && git svn rebase'
+alias gf='git diff-tree --no-commit-id --name-only -r HEAD'
 
 hbrm() {
   hg bookmark -r master $1 && hg update $1
@@ -109,3 +111,23 @@ PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(_dotfiles_scm_info)\[$normal_colours\
 
 # Disable auto complete case sensitivity
 bind "set completion-ignore-case on"
+export GOPATH=/Users/aizat/src/tasks/
+
+alias sfind='find app src'
+alias stwig='find app src -iname *.twig'
+alias scontroller='find app src -iname *Controller.php'
+alias syml='find app src -iname *.yml'
+alias sent='find app src -path */Entity/*.php'
+alias srepo='find app src -path */Repository/*.php'
+alias sbundle='find app src -iname *Bundle'
+alias sjs='find app src web -iname "*.js"'
+alias sbin='php bin/console'
+alias sgraphql='find src -path *GraphQL*.php'
+
+alias fjs='find . -iname "*.js"'
+alias fmd='find . -iname "*.md"'
+alias fphp='find . -iname "*.php"'
+alias fxml='find . -iname "*.xml"'
+alias fyml='find . -iname "*.yml"'
+alias ftwig='find . -iname "*.twig"'
+alias node='babel-node'

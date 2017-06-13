@@ -1,3 +1,24 @@
+set nocompatible              " be iMproved, required
+syntax on
+filetype plugin indent on
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'elzr/vim-json'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'isRuslan/vim-es6'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'jparise/vim-graphql'
+Plugin 'digitaltoad/vim-jade'
+
+" Above is required for vundle
+
 execute pathogen#infect()
 
 source ~/.vim/typos.vim                 " Common typos and abbreviations
@@ -29,6 +50,8 @@ set titlestring=vim:\ %F       " Format the title
 set mouse=a
 set smarttab
 set tags=tags;/                " keep going up a dir until you find a tags file
+set tabpagemax=100
+set nofoldenable " disable folds
 
 " == Mapping 
 " Open a CTAG in a new tab: http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
@@ -55,12 +78,7 @@ nnoremap <S-Q> <Esc>
 nmap :W :w
 nmap :Q :q
 
-" loads the directories "vim/ftdetect" and "vim/ftplugin"
-filetype plugin on
-
 " When the space bar key is hit, go down 10 spaces
 nmap <Space> 10j
 
 set runtimepath+=$GOROOT/misc/vim
-syntax on
-filetype plugin indent on

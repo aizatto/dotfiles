@@ -15,3 +15,5 @@
   stauts = status
 [core]
   excludesfile = ~/.gitignore
+[commit]
+	template = ~/.git/commit-message
