@@ -36,6 +36,7 @@ export LESS=' -R'
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+# export LSCOLORS=exfxcxdxbxegedabagacad
 export ACK_PAGER='less -R'
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
