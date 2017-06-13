@@ -113,7 +113,6 @@ PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(_dotfiles_scm_info)\[$normal_colours\
 
 # Disable auto complete case sensitivity
 bind "set completion-ignore-case on"
-export GOPATH=/Users/aizat/src/tasks/
 
 alias sfind='find app src'
 alias stwig='find app src -iname *.twig'
@@ -132,5 +131,4 @@ alias fphp='find . -iname "*.php"'
 alias fxml='find . -iname "*.xml"'
 alias fyml='find . -iname "*.yml"'
 alias ftwig='find . -iname "*.twig"'
-alias node='babel-node'
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

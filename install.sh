@@ -13,6 +13,11 @@ for i in $FILES; do
     continue
   fi
 
+  if [ "$i" == "bash_profile" ]; then
+    echo "skip $i"
+    continue
+  fi
+
   if [ -a "$HOME/.$i" ]; then
     echo "exists $i"
     continue
