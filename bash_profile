@@ -17,6 +17,8 @@ __aizatto_add_path "$HOME/src/android-sdk-macosx/tools"
 __aizatto_add_path "$HOME/src/android-sdk-macosx/platform-tools"
 __aizatto_add_path "$HOME/src/arcanist/bin"
 
+__aizatto_add_path "/etc/paths.d"
+
 __aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
 __aizatto_source "$HOME/.nvm/nvm.sh"
 __aizatto_source "$HOME/src/dotfiles/bash/dotfiles_scm_info.sh"
@@ -36,6 +38,7 @@ export LESS=' -R'
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+# export LSCOLORS=exfxcxdxbxegedabagacad
 export ACK_PAGER='less -R'
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
@@ -130,3 +133,4 @@ alias fxml='find . -iname "*.xml"'
 alias fyml='find . -iname "*.yml"'
 alias ftwig='find . -iname "*.twig"'
 alias node='babel-node'
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
