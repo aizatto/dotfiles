@@ -44,13 +44,6 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 
 alias pign=ping
-alias ad='arc lint && arc diff'
-alias au='arc unit'
-alias ap='arc pull && arc build'
-
-af() {
-  arc pull && arc feature $1 && arc pull && arc build
-}
 
 alias ga='git add'
 alias gb='git branch'
@@ -113,7 +106,6 @@ PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(_dotfiles_scm_info)\[$normal_colours\
 
 # Disable auto complete case sensitivity
 bind "set completion-ignore-case on"
-export GOPATH=/Users/aizat/src/tasks/
 
 alias sfind='find app src'
 alias stwig='find app src -iname *.twig'
@@ -132,5 +124,4 @@ alias fphp='find . -iname "*.php"'
 alias fxml='find . -iname "*.xml"'
 alias fyml='find . -iname "*.yml"'
 alias ftwig='find . -iname "*.twig"'
-alias node='babel-node'
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

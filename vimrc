@@ -12,10 +12,13 @@ Plugin 'elzr/vim-json'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'isRuslan/vim-es6'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'jparise/vim-graphql'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Above is required for vundle
 
@@ -82,3 +85,10 @@ nmap :Q :q
 nmap <Space> 10j
 
 set runtimepath+=$GOROOT/misc/vim
+
+" https://github.com/ctrlpvim/ctrlp.vim
+let g:ctrlp_map = '<C-f>'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" NERD Tree https://github.com/scrooloose/nerdtree
+map <C-e> :NERDTreeToggle<CR>

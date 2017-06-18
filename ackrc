@@ -10,5 +10,7 @@ xml=builder
 --ignore-dir=node_modules
 --ignore-dir=__generated__
 --ignore-dir=log
+--ignore-dir=dist
+--ignore-dir=.coverage
 --type-set
 twig=.twig
