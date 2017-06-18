@@ -89,6 +89,16 @@ set runtimepath+=$GOROOT/misc/vim
 " https://github.com/ctrlpvim/ctrlp.vim
 let g:ctrlp_map = '<C-f>'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" https://github.com/kien/ctrlp.vim/issues/160
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 
 " NERD Tree https://github.com/scrooloose/nerdtree
 map <C-e> :NERDTreeToggle<CR>
+
+" change these directories because some files may read the tempfiles that vim
+" creates
+set backupdir=./.backup,.,/tmp
+set directory=.,./.backup,/tmp

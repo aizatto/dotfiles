@@ -72,6 +72,10 @@ alias gsr='git svn rebase'
 alias gsrgf='git svn rebase && git fetch && git svn rebase'
 alias gf='git diff-tree --no-commit-id --name-only -r HEAD'
 
+# http://www.commandlinefu.com/commands/view/11552/open-in-vim-all-modified-files-in-a-git-repository
+# https://stackoverflow.com/questions/28280635/how-to-open-all-modified-files-with-git
+alias mvimgit='mvim `git ls-files -M`'
+
 hbrm() {
   hg bookmark -r master $1 && hg update $1
 }
@@ -125,3 +129,5 @@ alias fxml='find . -iname "*.xml"'
 alias fyml='find . -iname "*.yml"'
 alias ftwig='find . -iname "*.twig"'
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias unixtime='date +%s'
