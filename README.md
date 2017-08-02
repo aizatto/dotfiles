@@ -1,11 +1,11 @@
 Initialize:
 
-  ./install.sh
+    ./install.sh
 
-  git submodule init
-  git submodule update
-  vim ~/.vimrc
+    git submodule init
+    git submodule update
+    vim ~/.vimrc
 
 Inside vim:
 
-  :Plugin Install
+    :Plugin Install
