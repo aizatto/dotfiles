@@ -17,3 +17,5 @@
   excludesfile = ~/.gitignore
 [commit]
 	template = ~/.git/commit-message
+[diff]
+	wsErrorHighlight = all

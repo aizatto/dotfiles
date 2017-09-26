@@ -19,6 +19,7 @@ Plugin 'jparise/vim-graphql'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " Above is required for vundle
 

@@ -23,6 +23,8 @@ __aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
 __aizatto_source "$HOME/.nvm/nvm.sh"
 __aizatto_source "$HOME/src/dotfiles/bash/dotfiles_scm_info.sh"
 
+export PATH=$PATH:./node_modules/.bin/
+
 # Load OS specific stuff
 case `uname` in
   'Darwin' )
@@ -62,6 +64,7 @@ alias gl='git log'
 alias gl1='git log -n1'
 alias gl1p='git log -n1 -p'
 alias gll='git log -p'
+alias glg='git log --graph'
 alias gp='git pull'
 alias gpr='git pull --rebase'
 alias grc='git rebase --continue'
@@ -131,3 +134,5 @@ alias ftwig='find . -iname "*.twig"'
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias unixtime='date +%s'
+HISTSIZE=
+HISTFILESIZE=
