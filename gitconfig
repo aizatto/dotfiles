@@ -19,3 +19,6 @@
 	template = ~/.git/commit-message
 [diff]
 	wsErrorHighlight = all
+[user]
+	name = Aizat Faiz
+	email = aizat.faiz@gmail.com
