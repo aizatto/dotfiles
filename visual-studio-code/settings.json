@@ -1,0 +1,9 @@
+{
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Space>"],
+            "after": ["1", "0", "j"]
+        }
+    ]
+}
