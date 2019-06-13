@@ -5,5 +5,15 @@
             "before": ["<Space>"],
             "after": ["1", "0", "j"]
         }
-    ]
+    ],
+    "vim.hlsearch": true,
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.statusBar.feedback.visible": false,
+    "breadcrumbs.enabled": true,
+    "editor.tabSize": 2,
+    "editor.tabCompletion": "on",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "window.title": "${dirty}${activeEditorShort}${separator}${activeFolderLong}/${activeEditorShort}"
 }

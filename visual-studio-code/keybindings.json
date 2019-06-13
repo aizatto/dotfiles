@@ -147,11 +147,6 @@
         "command": "-workbench.action.focusEighthEditorGroup"
     },
     {
-        "key": "ctrl+p",
-        "command": "toggleSuggestionDetails",
-        "when": "suggestWidgetVisible && textInputFocus"
-    },
-    {
         "key": "ctrl+space",
         "command": "-toggleSuggestionDetails",
         "when": "suggestWidgetVisible && textInputFocus"
@@ -168,5 +163,15 @@
     {
         "key": "cmd+p",
         "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
     }
 ]
