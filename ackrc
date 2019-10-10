@@ -12,5 +12,6 @@ xml=builder
 --ignore-dir=log
 --ignore-dir=dist
 --ignore-dir=.coverage
+--ignore-dir=build
 --type-set
 twig=.twig

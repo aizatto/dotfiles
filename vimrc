@@ -20,6 +20,8 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'GutenYe/json5.vim'
 
 " Above is required for vundle
 

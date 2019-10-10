@@ -15,5 +15,13 @@
     "editor.tabSize": 2,
     "editor.tabCompletion": "on",
     "workbench.editor.focusRecentEditorAfterClose": false,
-    "window.title": "${dirty}${activeEditorShort}${separator}${activeFolderLong}/${activeEditorShort}"
+    "window.title": "${dirty}${activeEditorShort}${separator}${activeFolderLong}/${activeEditorShort}",
+    "workbench.quickOpen.preserveInput": true,
+    "python.jediEnabled": false,
+    "window.zoomLevel": 0,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "emmet.showExpandedAbbreviation": "never"
 }
