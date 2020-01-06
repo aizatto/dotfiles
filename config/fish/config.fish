@@ -16,3 +16,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /Users/aizat/.nvm/versions/node/v10.16.3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /Users/aizat/.nvm/versions/node/v10.16.3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
 set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
