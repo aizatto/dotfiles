@@ -109,7 +109,6 @@ magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
 PS1="\h:\W \u "
-PS1="${PS1:0:$((${#PS1} - 3))}\[$green\]\$(_dotfiles_scm_info)\[$normal_colours\]\$ "
 
 # Disable auto complete case sensitivity
 bind "set completion-ignore-case on"
@@ -131,6 +130,20 @@ alias fphp='find . -iname "*.php"'
 alias fxml='find . -iname "*.xml"'
 alias fyml='find . -iname "*.yml"'
 alias ftwig='find . -iname "*.twig"'
+
+alias kci='kubectl cluster-info'
+alias kd='kubectl describe'
+alias kdp='kubectl describe pods'
+alias kg='kubectl get'
+alias kgd='kubectl get deployments'
+alias kgn='kubectl get nodes'
+alias kgs='kubectl get services'
+alias kgp='kubectl get pods'
+alias kgrs='kubectl get rs'
+alias kgs='kubectl get services'
+alias kru='kubectl rollout undo'
+alias ks='kubectl scale'
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias unixtime='date +%s'
@@ -145,3 +158,4 @@ if [ -f '/Users/aizat/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/ai
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+if [ -f "${HOME}/.bash/dotfiles_scm_info.sh" ]; then . "${HOME}/.bash/dotfiles_scm_info.sh"; fi
