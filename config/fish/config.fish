@@ -1,3 +1,4 @@
+# https://fishshell.com/docs/current/cmds/test.html
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 [ -e /usr/local/Cellar/fzf/0.21.1/shell/key-bindings.fish ]; and source /usr/local/Cellar/fzf/0.21.1/shell/key-bindings.fish
@@ -20,3 +21,4 @@ set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
 set -gx PATH /usr/local/bin $PATH
+[ -d /Users/aizat/.pyenv/shims ]; and set -gx PATH /Users/aizat/.pyenv/shims $PATH

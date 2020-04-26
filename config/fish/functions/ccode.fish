@@ -1,5 +1,5 @@
 # Defined in - @ line 1
-function code
+function ccode
     if type -q code-insiders
         code-insiders $argv
     else
