@@ -22,3 +22,5 @@ set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
 set -gx PATH /usr/local/bin $PATH
 [ -d /Users/aizat/.pyenv/shims ]; and set -gx PATH /Users/aizat/.pyenv/shims $PATH
+[ -d $HOME/.cargo/bin ]; and set -gx PATH $HOME/.cargo/bin $PATH
+[ -d $HOME/go/bin ]; and set -gx PATH $HOME/go/bin $PATH
