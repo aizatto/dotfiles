@@ -22,3 +22,5 @@
 [user]
 	name = Aizat Faiz
 	email = aizat.faiz@gmail.com
+[pull]
+	rebase = true
