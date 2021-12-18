@@ -19,7 +19,7 @@ __aizatto_add_path "$HOME/src/arcanist/bin"
 
 __aizatto_add_path "/etc/paths.d"
 
-__aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
+# __aizatto_source "$HOME/.rvm/scripts/rvm" # Load RVM function
 __aizatto_source "$HOME/.nvm/nvm.sh"
 __aizatto_source "$HOME/src/dotfiles/bash/dotfiles_scm_info.sh"
 
@@ -45,35 +45,7 @@ export ACK_PAGER='less -R'
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 
-alias pign=ping
-
-alias ga='git add'
-alias gb='git branch'
-alias gba='git branch -a'
-alias gau='git add -u'
-alias gca='git commit --amend --no-edit'
-alias gci='git commit'
-alias gcm='git commit -m'
-alias gco='git checkout'
-alias gdc='git diff --cached'
-alias gd='git diff'
-alias gdd='git diff --name-only HEAD^ | cat'
-alias gf='git fetch'
-alias gfgsr='git fetch && git svn rebase'
-alias gl='git log'
-alias gl1='git log -n1'
-alias gl1p='git log -n1 -p'
-alias gll='git log -p'
-alias glg='git log --graph'
-alias gp='git pull'
-alias gpr='git pull --rebase'
-alias grc='git rebase --continue'
-alias gs='git status'
-alias gsi='git submodule init'
-alias gsu='git submodule update'
-alias gsr='git svn rebase'
-alias gsrgf='git svn rebase && git fetch && git svn rebase'
-alias gf='git diff-tree --no-commit-id --name-only -r HEAD'
+__aizatto_source "./bash/aliases"
 
 # http://www.commandlinefu.com/commands/view/11552/open-in-vim-all-modified-files-in-a-git-repository
 # https://stackoverflow.com/questions/28280635/how-to-open-all-modified-files-with-git
@@ -82,27 +54,6 @@ alias mvimgit='mvim `git ls-files -M`'
 hbrm() {
   hg bookmark -r master $1 && hg update $1
 }
-
-alias hb='hg bookmark'
-alias hca='hg commit --amend'
-alias hd='hg diff'
-alias hl1='hg log -l 1'
-alias hl1p='hg log -l 1 -p'
-alias hlcl='hg log --style changelog'
-alias hl='hg log'
-alias hp='hg pull'
-alias hrc='hg rebase --continue'
-alias hrdd='hg rebase -d default'
-alias hrdm='hg rebase -d master'
-alias hrl='hg resolve --list'
-alias hrm='hg resolve --mark'
-alias hru='hg resolve --unmark'
-alias hs='hg status'
-alias hsn='hg status --no-status'
-alias hgfiles='hg status --no-status --change .'
-alias hu='hg update'
-alias huc='hg update --check'
-alias huC='hg update --clean'
 
 green=$'\e[1;32m'
 magenta=$'\e[1;35m'
@@ -131,19 +82,6 @@ alias fxml='find . -iname "*.xml"'
 alias fyml='find . -iname "*.yml"'
 alias ftwig='find . -iname "*.twig"'
 
-alias kci='kubectl cluster-info'
-alias kd='kubectl describe'
-alias kdp='kubectl describe pods'
-alias kg='kubectl get'
-alias kgd='kubectl get deployments'
-alias kgn='kubectl get nodes'
-alias kgs='kubectl get services'
-alias kgp='kubectl get pods'
-alias kgrs='kubectl get rs'
-alias kgs='kubectl get services'
-alias kru='kubectl rollout undo'
-alias ks='kubectl scale'
-
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias unixtime='date +%s'
@@ -159,3 +97,5 @@ if [ -f '/Users/aizat/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/ai
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 if [ -f "${HOME}/.bash/dotfiles_scm_info.sh" ]; then . "${HOME}/.bash/dotfiles_scm_info.sh"; fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
