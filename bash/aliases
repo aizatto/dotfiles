@@ -1,5 +1,8 @@
 alias pign=ping
 
+# Docker
+alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Image}}"'
+
 # Git
 alias ga='git add'
 alias gau='git add -u'
